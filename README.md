@@ -1,5 +1,5 @@
 # Sukrut App UI
-----------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and Ionic 4 framework.
 
 ## Steps to run in local environment
@@ -66,6 +66,9 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
 To learn React, check out the [React documentation](https://reactjs.org/).
+
 To learn Ionic, check out [Ionic documentaion](https://ionicframework.com/docs/).
+
 To learn Capacitor, check out [Capacitor doumentation](https://capacitor.ionicframework.com/docs/).
