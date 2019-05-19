@@ -1,0 +1,7 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "Sukrut",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build"
+}

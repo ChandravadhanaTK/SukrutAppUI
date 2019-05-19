@@ -1,0 +1,7 @@
+{
+  "name": "Sukrut",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}
