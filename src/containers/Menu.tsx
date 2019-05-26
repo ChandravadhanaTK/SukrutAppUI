@@ -4,10 +4,8 @@ import { RouteComponentProps, withRouter } from 'react-router';
 
 const routes = {
   appPages: [
-    { title: 'Schedule', path: '/', icon: 'calendar' },
-    { title: 'Speakers', path: '/', icon: 'contacts' },
-    { title: 'Map', path: '/', icon: 'map' },
-    { title: 'About', path: '/', icon: 'information-circle' }
+    { title: 'Home', path: '/', icon: 'calendar' },
+    // { title: 'Todos', path: '/todos', icon: 'information-circle' }
   ]
 }
 
