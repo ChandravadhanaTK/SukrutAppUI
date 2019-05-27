@@ -5,7 +5,7 @@ import { RouteComponentProps, withRouter } from 'react-router';
 const routes = {
   appPages: [
     { title: 'Home', path: '/', icon: 'calendar' },
-    // { title: 'Todos', path: '/todos', icon: 'information-circle' }
+    { title: 'Todos', path: '/todos', icon: 'information-circle' }
   ]
 }
 

@@ -37,7 +37,7 @@ export const getAllTodos: ActionCreator<
 > = () => {
 	return async (dispatch: Dispatch) => {
 		API.get('/todos')
-      .then(res => dispatch({type: TodoActionTypes.GET_ALL, payload: res}))
+      .then((res:any) => dispatch({type: TodoActionTypes.GET_ALL, payload: res.data}))
       .catch(err => console.log(err))
 	}
 }

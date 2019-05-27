@@ -13,6 +13,7 @@ interface IProps {
   getTodos: () => Promise<ITodoGetAllAction>
 }
 class Todos extends React.Component<IProps> {
+  // eslint-disable-next-line
   constructor(props: IProps) {
     super(props)
   }
@@ -37,7 +38,7 @@ class Todos extends React.Component<IProps> {
 					</IonText>
           {todos && todos.map(todo => {
             return (
-              <Todo todo={todo}></Todo>
+              <Todo todo={todo} key={todo.id}></Todo>
             )
           })}
 				</IonContent>
