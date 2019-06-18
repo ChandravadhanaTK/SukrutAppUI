@@ -1,21 +1,16 @@
-import React, { Component } from "react";
-import "../styles/DashBoard.css";
+import React from "react";
 import {
   IonToolbar,
   IonButtons,
-  IonMenuButton,
   IonTitle,
   IonFooter,
   IonCard,
-  IonCardHeader,
-  IonCardContent,
   IonItem,
   IonButton,
   IonIcon,
   IonLabel,
   IonHeader,
   IonContent,
-  IonText,
   IonGrid,
   IonCol,
   IonRow
@@ -26,7 +21,7 @@ type State = {
   showModal: boolean;
 };
 
-class DashBoard extends React.Component<Props, State> {
+class Dashboard extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -85,4 +80,4 @@ class DashBoard extends React.Component<Props, State> {
   }
 }
 
-export default DashBoard;
+export default Dashboard;

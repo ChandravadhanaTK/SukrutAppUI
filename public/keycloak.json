@@ -1,0 +1,10 @@
+{
+  "realm": "sukrut",
+  "auth-server-url": "http://keycloak-server-r-sukrut-test.apps.us-east-2.online-starter.openshift.com/auth",
+  "ssl-required": "external",
+  "resource": "sukrut-app-local",
+  "public-client": true,
+  "verify-token-audience": true,
+  "use-resource-role-mappings": true,
+  "confidential-port": 0
+}

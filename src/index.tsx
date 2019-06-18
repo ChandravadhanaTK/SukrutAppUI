@@ -8,6 +8,9 @@ import * as serviceWorker from './serviceWorker';
 import '@ionic/core/css/core.css';
 import '@ionic/core/css/ionic.bundle.css';
 
+// Importing Sukrut SCSS
+import './assets/styles/style.scss'
+
 // Generate the store
 const store = configureStore();
 
