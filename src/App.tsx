@@ -11,6 +11,13 @@ import { IonApp, IonSplitPane } from '@ionic/react'
 import Menu from './containers/Menu'
 import PageRoutes from './routes/pageRoutes'
 
+import Geo from "./containers/geo";
+import { Geofence } from "@ionic-native/geofence/ngx";
+import { Geolocation } from "@ionic-native/geolocation/ngx";
+import { SMS } from "@ionic-native/sms/ngx";
+
+
+
 const keycloak = Keycloak();
 
 interface IProps {
@@ -52,12 +59,26 @@ class App extends React.PureComponent<IProps> {
           <Router>
             <div id="app">
               <IonApp>
-                <IonSplitPane contentId="main">
-                  <Menu/>
-                  <div id="main" className="ion-page">
-                    <PageRoutes/>
-                  </div>
-                </IonSplitPane>
+                <IonContent>
+            <div className="loader" />
+            <div className="bottom-container" />
+            <IonItem>
+              <IonRange
+                min={40}
+                max={300}
+                color="primary"
+                pin={true}
+                snaps={true}
+              />
+            </IonItem>
+          </IonContent>
+          <IonButton
+            onClick={onClick => {
+              new Geo(new Geofence(), new Geolocation(), new SMS()).setGeofence(
+                100
+              );
+            }}
+          />
               </IonApp>
             </div>
           </Router>

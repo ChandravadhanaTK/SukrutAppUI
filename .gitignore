@@ -24,3 +24,5 @@ yarn-error.log*
 
 # android
 /android
+/plugins
+resources
