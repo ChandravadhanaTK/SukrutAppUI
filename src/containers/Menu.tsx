@@ -1,4 +1,5 @@
 import React from 'react';
+import { useKeycloak  } from 'react-keycloak'
 import { IonIcon, IonMenu, IonHeader, IonToolbar, IonTitle, IonContent, IonList, IonListHeader, IonItem, IonLabel, IonMenuToggle } from '@ionic/react';
 import { RouteComponentProps, withRouter } from 'react-router';
 
@@ -12,6 +13,7 @@ const routes = {
 type Props = RouteComponentProps<{}>;
 
 const Menu: React.FC<Props> = ({ history }) => {
+  const { keycloak } = useKeycloak();
 
   function renderlistItems(list: any[]) {
     return list
@@ -44,12 +46,21 @@ const Menu: React.FC<Props> = ({ history }) => {
         </IonList>
         <IonList>
           <IonListHeader>
-            Tutorial
+            Account
           </IonListHeader>
-          <IonItem onClick={() => {}}>
-            <IonIcon slot="start" name="hammer"></IonIcon>
-            Show Tutorial
-          </IonItem>
+          <IonMenuToggle auto-hide="false">
+            {keycloak.authenticated ? (
+              <IonItem button onClick={() => keycloak.logout()}>
+                <IonIcon slot="start" name="log-out"></IonIcon>
+                <IonLabel>Logout</IonLabel>
+              </IonItem>
+            ) : (
+              <IonItem button onClick={() => keycloak.login()}>
+                <IonIcon slot="start" name="log-in"></IonIcon>
+                <IonLabel>Login</IonLabel>
+              </IonItem>
+            )}
+          </IonMenuToggle>
         </IonList>
       </IonContent>
     </IonMenu>

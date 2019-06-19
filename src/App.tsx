@@ -34,6 +34,7 @@ class App extends React.PureComponent<IProps> {
 
   onKeycloakTokens = (tokens:any) => {
     console.log({ tokens });
+    console.log(JSON.stringify(keycloak.tokenParsed));
     localStorage.setItem('kcTokens', JSON.stringify(tokens));
   }
   
@@ -42,7 +43,7 @@ class App extends React.PureComponent<IProps> {
       <KeycloakProvider
         keycloak={keycloak}
         initConfig={{
-          onLoad: 'login-required',
+          onLoad: 'check-sso',
           ...this.tokens,
         }}
         onEvent={this.onKeycloakEvent}
